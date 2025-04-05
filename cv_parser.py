@@ -4,8 +4,8 @@ from docx import Document
 import openai
 import json
 
-# Set your OpenAI API key
-openai.api_key = os.getenv("OPENAI_API_KEY")  # or replace with your key directly
+# Setup OpenAI API key from env file.
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def extract_text_from_pdf(file_path):
     with pdfplumber.open(file_path) as pdf:
